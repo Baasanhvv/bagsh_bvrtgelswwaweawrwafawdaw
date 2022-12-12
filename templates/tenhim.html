@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block aguulga %}
+<div style="margin-top: 50px">
+  <div class="old1">
+    <table>
+      <tr style="height: 5px">
+        <th>Тэнхим нэр</th>
+      </tr>
+      {%for tenhim in tenhims%}
+      <tr>
+        <td>{{tenhim.tenhimName}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+  <div class="old2">
+    <form action="" method="post">
+      <label for="tenhimName">Тэнхим нэр</label><br />
+      <input
+        name="tenhimName"
+        type="text"
+        id="tenhimName"
+        placeholder="Type in your tenhimName.."
+        autocomplete="off"
+        required
+      /><br />
+      <input type="submit" name="submit" value="Хадгалах" />
+    </form>
+  </div>
+</div>
+{% endblock %}

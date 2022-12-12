@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block aguulga %}
+<div style="margin-top: 50px">
+  <div class="old1">
+    <table>
+      <tr style="height: 5px">
+        <th>Албан тушаал</th>
+      </tr>
+      {%for albantushaal in albantushaals%}
+      <tr>
+        <td>{{albantushaal.albantushaalName}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </div>
+  <div class="old2">
+    <form action="" method="post">
+      <label for="albantushaalName">Албан тушаалын нэр</label><br />
+      <input
+        name="albantushaalName"
+        type="text"
+        id="albantushaalName"
+        placeholder="Type in your albantushaalName.."
+        autocomplete="off"
+        required
+      /><br />
+      <input type="submit" name="submit" value="Хадгалах" />
+    </form>
+  </div>
+</div>
+{% endblock %}
